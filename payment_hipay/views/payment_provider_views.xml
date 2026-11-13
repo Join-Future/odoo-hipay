@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="payment_provider_form" model="ir.ui.view">
+        <field name="name">HiPay Provider Form</field>
+        <field name="model">payment.provider</field>
+        <field name="inherit_id" ref="payment.payment_provider_form"/>
+        <field name="arch" type="xml">
+            <group name="provider_credentials" position="inside">
+                <group invisible="code != 'hipay'" name="hipay_credentials">
+                    <field name="hipay_api_url"
+                           required="code == 'hipay' and state != 'disabled'"/>
+                    <field name="hipay_secret_key_test"
+                           password="True"
+                           placeholder="hp_sk_test_..."
+                           required="code == 'hipay' and state == 'test'"/>
+                    <field name="hipay_webhook_secret_test"
+                           password="True"
+                           placeholder="whsec_..."/>
+                    <field name="hipay_secret_key_live"
+                           password="True"
+                           placeholder="hp_sk_live_..."
+                           required="code == 'hipay' and state == 'enabled'"/>
+                    <field name="hipay_webhook_secret_live"
+                           password="True"
+                           placeholder="whsec_..."/>
+                </group>
+                <div invisible="code != 'hipay'" class="o_row text-muted" colspan="2">
+                    <span>
+                        Test Mode uses the test key and Enabled uses the live key. In the HiPay
+                        portal, add a webhook endpoint for each mode that points to
+                        <code>/payment/hipay/webhook</code> on this website, and paste its
+                        signing secret here.
+                    </span>
+                </div>
+            </group>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,285 @@
+# Arabic translation of HiPay by Join Future for Odoo.
+# This file contains the translation of the following modules:
+# 	* payment_hipay
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20261112\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-13 14:20+0000\n"
+"PO-Revision-Date: 2026-11-13 14:20+0000\n"
+"Last-Translator: \n"
+"Language-Team: Arabic\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+
+#. module: payment_hipay
+#: model_terms:ir.ui.view,arch_db:payment_hipay.payment_provider_form
+msgid ""
+"<span>\n"
+"                        Test Mode uses the test key and Enabled uses the live key. In the HiPay\n"
+"                        portal, add a webhook endpoint for each mode that points to\n"
+"                        <code>/payment/hipay/webhook</code> on this website, and paste its\n"
+"                        signing secret here.\n"
+"                    </span>"
+msgstr ""
+"<span>\n"
+"                        وضع الاختبار يستخدم مفتاح الاختبار، ووضع التفعيل يستخدم المفتاح الحي. في بوابة\n"
+"                        HiPay أضف نقطة استقبال webhook لكل وضع تشير إلى\n"
+"                        <code>/payment/hipay/webhook</code> على هذا الموقع، والصق سر التوقيع\n"
+"                        الخاص بها هنا.\n"
+"                    </span>"
+
+#. module: payment_hipay
+#: model:ir.model.fields,field_description:payment_hipay.field_payment_provider__code
+msgid "Code"
+msgstr "الرمز"
+
+#. module: payment_hipay
+#. odoo-python
+#: code:addons/payment_hipay/models/payment_provider.py:0
+msgid "Could not establish the connection to the API."
+msgstr "تعذّر الاتصال بواجهة HiPay البرمجية."
+
+#. module: payment_hipay
+#: model:ir.model.fields.selection,name:payment_hipay.selection__payment_provider__code__hipay
+msgid "HiPay"
+msgstr "HiPay"
+
+#. module: payment_hipay
+#: model:ir.model.fields,field_description:payment_hipay.field_payment_provider__hipay_api_url
+msgid "HiPay API URL"
+msgstr "رابط واجهة HiPay البرمجية"
+
+#. module: payment_hipay
+#: model:payment.provider,name:payment_hipay.payment_provider_hipay
+msgid "HiPay by Join Future"
+msgstr "هاي باي من جوين فيوتشر"
+
+#. module: payment_hipay
+#. odoo-python
+#: code:addons/payment_hipay/models/payment_provider.py:0
+msgid ""
+"HiPay: set the %(mode)s secret key before switching the provider to this "
+"state."
+msgstr ""
+"HiPay: أدخل المفتاح السري (%(mode)s) قبل تحويل مزوّد الدفع إلى هذه الحالة."
+
+#. module: payment_hipay
+#. odoo-python
+#: code:addons/payment_hipay/models/payment_provider.py:0
+msgid "HiPay: the key for this state must start with %(prefix)s."
+msgstr "HiPay: يجب أن يبدأ مفتاح هذه الحالة بـ %(prefix)s."
+
+#. module: payment_hipay
+#. odoo-python
+#: code:addons/payment_hipay/models/payment_transaction.py:0
+msgid "Item"
+msgstr "منتج"
+
+#. module: payment_hipay
+#: model:ir.model.fields,field_description:payment_hipay.field_payment_provider__hipay_secret_key_live
+msgid "Live Secret Key"
+msgstr "المفتاح السري الحي"
+
+#. module: payment_hipay
+#: model:ir.model.fields,field_description:payment_hipay.field_payment_provider__hipay_webhook_secret_live
+msgid "Live Webhook Signing Secret"
+msgstr "سر توقيع webhook الحي"
+
+#. module: payment_hipay
+#. odoo-python
+#: code:addons/payment_hipay/models/payment_transaction.py:0
+msgid "No transaction found matching reference %s."
+msgstr "لا توجد معاملة بالمرجع %s."
+
+#. module: payment_hipay
+#: model:ir.model,name:payment_hipay.model_payment_provider
+msgid "Payment Provider"
+msgstr "مزود الدفع"
+
+#. module: payment_hipay
+#: model:ir.model,name:payment_hipay.model_payment_transaction
+msgid "Payment Transaction"
+msgstr "معاملة الدفع"
+
+#. module: payment_hipay
+#. odoo-python
+#: code:addons/payment_hipay/models/payment_transaction.py:0
+msgid "Received data with invalid payment status: %s"
+msgstr "وصلت بيانات بحالة دفع غير صالحة: %s"
+
+#. module: payment_hipay
+#. odoo-python
+#: code:addons/payment_hipay/models/payment_transaction.py:0
+msgid "Received data with invalid refund status: %s"
+msgstr "وصلت بيانات بحالة استرداد غير صالحة: %s"
+
+#. module: payment_hipay
+#. odoo-python
+#: code:addons/payment_hipay/models/payment_transaction.py:0
+msgid "Received data with missing PaymentIntent."
+msgstr "وصلت بيانات دون PaymentIntent."
+
+#. module: payment_hipay
+#. odoo-python
+#: code:addons/payment_hipay/models/payment_transaction.py:0
+msgid "Received data with missing reference."
+msgstr "وصلت بيانات دون مرجع."
+
+#. module: payment_hipay
+#. odoo-python
+#: code:addons/payment_hipay/models/payment_transaction.py:0
+msgid "Received data with missing refund."
+msgstr "وصلت بيانات دون استرداد."
+
+#. module: payment_hipay
+#: model:ir.model.fields,field_description:payment_hipay.field_payment_provider__hipay_secret_key_test
+msgid "Test Secret Key"
+msgstr "مفتاح الاختبار السري"
+
+#. module: payment_hipay
+#: model:ir.model.fields,field_description:payment_hipay.field_payment_provider__hipay_webhook_secret_test
+msgid "Test Webhook Signing Secret"
+msgstr "سر توقيع webhook للاختبار"
+
+#. module: payment_hipay
+#. odoo-python
+#: code:addons/payment_hipay/models/payment_transaction.py:0
+msgid "The PaymentIntent %(received)s does not belong to transaction %(ref)s."
+msgstr "عملية الدفع %(received)s لا تخص المعاملة %(ref)s."
+
+#. module: payment_hipay
+#: model:ir.model.fields,help:payment_hipay.field_payment_provider__hipay_api_url
+msgid ""
+"The base URL of the HiPay API. Keep the default unless Join Future gives you"
+" another one."
+msgstr ""
+"الرابط الأساسي لواجهة HiPay البرمجية. أبقِ القيمة الافتراضية ما لم تزودك جوين فيوتشر برابط آخر."
+
+#. module: payment_hipay
+#. odoo-python
+#: code:addons/payment_hipay/models/payment_provider.py:0
+msgid ""
+"The communication with the API failed. HiPay gave us the following "
+"information: %s"
+msgstr "فشل الاتصال بالواجهة البرمجية. أفادت HiPay بما يلي: %s"
+
+#. module: payment_hipay
+#. odoo-python
+#: code:addons/payment_hipay/models/payment_transaction.py:0
+msgid "The paid amount does not match the order amount."
+msgstr "المبلغ المدفوع لا يطابق مبلغ الطلب."
+
+#. module: payment_hipay
+#. odoo-python
+#: code:addons/payment_hipay/models/payment_transaction.py:0
+msgid "The payment was canceled."
+msgstr "أُلغيت عملية الدفع."
+
+#. module: payment_hipay
+#. odoo-python
+#: code:addons/payment_hipay/models/payment_transaction.py:0
+msgid "The refund %(received)s does not belong to transaction %(ref)s."
+msgstr "الاسترداد %(received)s لا يخص المعاملة %(ref)s."
+
+#. module: payment_hipay
+#. odoo-python
+#: code:addons/payment_hipay/models/payment_transaction.py:0
+msgid "The refund failed."
+msgstr "فشل الاسترداد."
+
+#. module: payment_hipay
+#. odoo-python
+#: code:addons/payment_hipay/models/payment_transaction.py:0
+msgid "The refund was canceled."
+msgstr "أُلغي الاسترداد."
+
+#. module: payment_hipay
+#: model:ir.model.fields,help:payment_hipay.field_payment_provider__hipay_secret_key_live
+msgid ""
+"The secret key that starts with hp_sk_live_. Used while the provider is "
+"Enabled."
+msgstr ""
+"المفتاح السري الذي يبدأ بـ hp_sk_live_ ويُستخدم عندما يكون المزوّد مفعّلًا."
+
+#. module: payment_hipay
+#: model:ir.model.fields,help:payment_hipay.field_payment_provider__hipay_secret_key_test
+msgid ""
+"The secret key that starts with hp_sk_test_. Used while the provider is in "
+"Test Mode."
+msgstr ""
+"المفتاح السري الذي يبدأ بـ hp_sk_test_ ويُستخدم عندما يكون المزوّد في وضع الاختبار."
+
+#. module: payment_hipay
+#: model:ir.model.fields,help:payment_hipay.field_payment_provider__code
+msgid "The technical code of this payment provider."
+msgstr "الرمز التقني لمزود الدفع هذا."
+
+#. module: payment_hipay
+#: model:ir.model.fields,help:payment_hipay.field_payment_provider__hipay_webhook_secret_live
+msgid ""
+"The whsec_ secret HiPay shows once when you add a live webhook endpoint."
+msgstr "سر whsec_ الذي تعرضه HiPay مرة واحدة عند إضافة نقطة webhook حية."
+
+#. module: payment_hipay
+#: model:ir.model.fields,help:payment_hipay.field_payment_provider__hipay_webhook_secret_test
+msgid ""
+"The whsec_ secret HiPay shows once when you add a test webhook endpoint."
+msgstr "سر whsec_ الذي تعرضه HiPay مرة واحدة عند إضافة نقطة webhook للاختبار."
+
+#. module: payment_hipay
+#: model_terms:payment.provider,pre_msg:payment_hipay.payment_provider_hipay
+msgid "You will be sent to HiPay by Join Future to pay securely."
+msgstr "ستنتقل إلى هاي باي من جوين فيوتشر لتدفع بأمان."
+
+#. module: payment_hipay
+#: model_terms:payment.provider,auth_msg:payment_hipay.payment_provider_hipay
+msgid "Your payment has been authorized."
+msgstr "تم تفويض عملية الدفع."
+
+#. module: payment_hipay
+#: model_terms:payment.provider,cancel_msg:payment_hipay.payment_provider_hipay
+msgid "Your payment has been cancelled."
+msgstr "تم إلغاء عملية الدفع."
+
+#. module: payment_hipay
+#: model_terms:payment.provider,pending_msg:payment_hipay.payment_provider_hipay
+msgid ""
+"Your payment has been successfully processed but is waiting for approval."
+msgstr "تمت معالجة الدفع بنجاح وهو بانتظار الموافقة."
+
+#. module: payment_hipay
+#: model_terms:payment.provider,done_msg:payment_hipay.payment_provider_hipay
+msgid "Your payment has been successfully processed."
+msgstr "تمت معالجة الدفع بنجاح."
+
+#. module: payment_hipay
+#: model_terms:ir.ui.view,arch_db:payment_hipay.payment_provider_form
+msgid "hp_sk_live_..."
+msgstr "hp_sk_live_..."
+
+#. module: payment_hipay
+#: model_terms:ir.ui.view,arch_db:payment_hipay.payment_provider_form
+msgid "hp_sk_test_..."
+msgstr "hp_sk_test_..."
+
+#. module: payment_hipay
+#. odoo-python
+#: code:addons/payment_hipay/models/payment_provider.py:0
+msgid "live"
+msgstr "الحي"
+
+#. module: payment_hipay
+#. odoo-python
+#: code:addons/payment_hipay/models/payment_provider.py:0
+msgid "test"
+msgstr "الاختبار"
+
+#. module: payment_hipay
+#: model_terms:ir.ui.view,arch_db:payment_hipay.payment_provider_form
+msgid "whsec_..."
+msgstr "whsec_..."

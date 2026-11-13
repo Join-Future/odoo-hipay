@@ -1,0 +1,89 @@
+<section class="oe_container" style="padding: 32px 0 16px;">
+    <div class="oe_row" style="max-width: 980px; margin: 0 auto;">
+        <div style="text-align: center;">
+            <img src="icon.png" alt="HiPay by Join Future" style="width: 80px; height: 80px; border-radius: 18px;"/>
+            <h2 style="font-size: 34px; font-weight: 700; margin: 18px 0 8px; color: #0F1B0E;">HiPay by Join Future</h2>
+            <h3 style="font-size: 20px; font-weight: 400; margin: 0 0 20px; color: #4B5563;">
+                Online payments for Odoo in Bahrain and the GCC
+            </h3>
+            <p style="font-size: 16px; color: #374151; max-width: 720px; margin: 0 auto 24px; line-height: 1.6;">
+                Take card, BENEFIT, Apple Pay and Google Pay payments on your Odoo website, portal
+                and invoice payment links. Your customer pays on the secure HiPay checkout, Odoo
+                confirms the order from the HiPay API and from signed webhooks, and you refund in
+                full or in part from Odoo.
+            </p>
+            <img src="banner.png" alt="HiPay by Join Future for Odoo" style="max-width: 100%; border-radius: 12px;"/>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container" style="padding: 24px 0;">
+    <div class="oe_row" style="max-width: 980px; margin: 0 auto;">
+        <h3 style="font-size: 24px; font-weight: 700; color: #0F1B0E; text-align: center; margin-bottom: 24px;">What you get</h3>
+        <div class="row">
+            <div class="col-md-6" style="margin-bottom: 18px;">
+                <h4 style="font-size: 17px; font-weight: 700;">Cards, BENEFIT and wallets</h4>
+                <p style="color: #4B5563;">Visa and Mastercard with 3-D Secure, BENEFIT debit cards, Apple Pay and Google Pay, all on one hosted checkout page in English or Arabic.</p>
+            </div>
+            <div class="col-md-6" style="margin-bottom: 18px;">
+                <h4 style="font-size: 17px; font-weight: 700;">Exact to the fil</h4>
+                <p style="color: #4B5563;">BHD, KWD, OMR and JOD use 3 decimals and SAR, AED, QAR, EGP and USD use 2. Amounts are sent in minor units with no rounding drift.</p>
+            </div>
+            <div class="col-md-6" style="margin-bottom: 18px;">
+                <h4 style="font-size: 17px; font-weight: 700;">Items and VAT on the checkout</h4>
+                <p style="color: #4B5563;">The checkout lists the order lines with their images, the delivery line and the VAT row, so the customer sees exactly what they pay for.</p>
+            </div>
+            <div class="col-md-6" style="margin-bottom: 18px;">
+                <h4 style="font-size: 17px; font-weight: 700;">Verified, not trusted</h4>
+                <p style="color: #4B5563;">The return from the checkout is checked against the HiPay API with your secret key, and webhooks are checked with an HMAC-SHA256 signature and a 5 minute window.</p>
+            </div>
+            <div class="col-md-6" style="margin-bottom: 18px;">
+                <h4 style="font-size: 17px; font-weight: 700;">Refunds from Odoo</h4>
+                <p style="color: #4B5563;">Refund in full or in part from the payment. Refunds made in the HiPay portal are added to Odoo by the webhook, once.</p>
+            </div>
+            <div class="col-md-6" style="margin-bottom: 18px;">
+                <h4 style="font-size: 17px; font-weight: 700;">Safe retries</h4>
+                <p style="color: #4B5563;">Every payment and refund request carries an idempotency key, so a network retry never charges or refunds twice.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container" style="padding: 24px 0;">
+    <div class="oe_row" style="max-width: 980px; margin: 0 auto;">
+        <h3 style="font-size: 24px; font-weight: 700; color: #0F1B0E; text-align: center; margin-bottom: 18px;">The customer pays on HiPay</h3>
+        <p style="text-align: center; color: #4B5563;">Odoo lists HiPay's card and BENEFIT methods at checkout.</p>
+        <img src="screenshot_checkout.png" alt="Odoo checkout with HiPay" style="max-width: 100%; border: 1px solid #E5E7EB; border-radius: 10px; margin-bottom: 28px;"/>
+        <p style="text-align: center; color: #4B5563;">The HiPay checkout shows the items, delivery, VAT and total, then sends the customer back to Odoo.</p>
+        <img src="screenshot_hipay_checkout.png" alt="HiPay hosted checkout" style="max-width: 100%; border: 1px solid #E5E7EB; border-radius: 10px; margin-bottom: 28px;"/>
+        <p style="text-align: center; color: #4B5563;">The order is confirmed once HiPay confirms the payment.</p>
+        <img src="screenshot_confirmation.png" alt="Order confirmed in Odoo" style="max-width: 100%; border: 1px solid #E5E7EB; border-radius: 10px;"/>
+    </div>
+</section>
+
+<section class="oe_container" style="padding: 24px 0;">
+    <div class="oe_row" style="max-width: 980px; margin: 0 auto;">
+        <h3 style="font-size: 24px; font-weight: 700; color: #0F1B0E; text-align: center; margin-bottom: 18px;">Set up in minutes</h3>
+        <ol style="font-size: 15px; color: #374151; line-height: 1.8; max-width: 760px; margin: 0 auto 24px;">
+            <li>Ask Join Future for a HiPay merchant account at <a href="https://pay.joinfuture.ai">pay.joinfuture.ai</a>. You get a test secret key at once and a live key after onboarding.</li>
+            <li>In Odoo, open Invoicing or Website, Configuration, Payment Providers, HiPay by Join Future.</li>
+            <li>Paste the test secret key (hp_sk_test_...) and set the state to Test Mode.</li>
+            <li>In the HiPay portal, add a webhook endpoint for https://your-odoo/payment/hipay/webhook and paste its whsec_ signing secret.</li>
+            <li>When you are ready, paste the live key and its webhook secret and set the state to Enabled.</li>
+        </ol>
+        <img src="screenshot_provider.png" alt="HiPay provider settings" style="max-width: 100%; border: 1px solid #E5E7EB; border-radius: 10px; margin-bottom: 28px;"/>
+        <img src="screenshot_transactions.png" alt="HiPay payments and refunds in Odoo" style="max-width: 100%; border: 1px solid #E5E7EB; border-radius: 10px;"/>
+    </div>
+</section>
+
+<section class="oe_container" style="padding: 24px 0 40px;">
+    <div class="oe_row" style="max-width: 980px; margin: 0 auto; text-align: center;">
+        <h3 style="font-size: 22px; font-weight: 700; color: #0F1B0E;">Support</h3>
+        <p style="color: #4B5563;">
+            HiPay by Join Future, Bahrain. Write to
+            <a href="mailto:hipay@joinfuture.ai">hipay@joinfuture.ai</a> or visit
+            <a href="https://pay.joinfuture.ai">pay.joinfuture.ai</a>.
+            The module is free and published under the LGPL-3 license.
+        </p>
+    </div>
+</section>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="redirect_form">
+        <!-- Sends the buyer to the HiPay hosted checkout of the PaymentIntent created for this
+             transaction. HiPay sends them back to /payment/hipay/return when they are done. -->
+        <form t-att-action="api_url" method="get">
+            <t t-foreach="url_params" t-as="param">
+                <input type="hidden" t-att-name="param" t-att-value="url_params[param]"/>
+            </t>
+        </form>
+    </template>
+
+</odoo>
