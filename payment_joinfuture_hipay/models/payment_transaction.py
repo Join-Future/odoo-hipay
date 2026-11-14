@@ -11,8 +11,8 @@ from odoo import _, api, models
 from odoo.exceptions import ValidationError
 from odoo.tools import float_repr
 
-from odoo.addons.payment_hipay import const
-from odoo.addons.payment_hipay.controllers.main import HiPayController
+from odoo.addons.payment_joinfuture_hipay import const
+from odoo.addons.payment_joinfuture_hipay.controllers.main import HiPayController
 
 _logger = logging.getLogger(__name__)
 

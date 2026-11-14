@@ -1,6 +1,6 @@
 # HiPay by Join Future for Odoo
 
-`payment_hipay` is an Odoo 18 payment provider for **HiPay by Join Future**, the
+`payment_joinfuture_hipay` is an Odoo 18 payment provider for **HiPay by Join Future**, the
 payment gateway for Bahrain and the GCC. Customers pay on the HiPay hosted
 checkout (cards with 3-D Secure, BENEFIT, Apple Pay, Google Pay) and come back to
 Odoo, which confirms the payment with the HiPay API.
@@ -53,7 +53,7 @@ Odoo, which confirms the payment with the HiPay API.
 
 ## Install
 
-1. Copy the `payment_hipay` folder into your Odoo addons path (or install it from
+1. Copy the `payment_joinfuture_hipay` folder into your Odoo addons path (or install it from
    the Odoo Apps store), restart Odoo, then **Apps > Update Apps List**.
 2. Install **Payment Provider: HiPay by Join Future**.
 
@@ -87,7 +87,7 @@ refuses `localhost` and private addresses as a return URL or webhook URL.
 The tests mock every HTTP call to HiPay:
 
 ```bash
-odoo -d <test db> -i payment_hipay --test-enable --test-tags /payment_hipay --stop-after-init
+odoo -d <test db> -i payment_joinfuture_hipay --test-enable --test-tags /payment_joinfuture_hipay --stop-after-init
 ```
 
 They cover PaymentIntent creation and the redirect form, 3-decimal amounts,
@@ -128,7 +128,7 @@ repository keeps the module under `integrations/odoo/`, so export it first:
 integrations/odoo/export_module_repo.sh ./build/odoo-hipay git@github.com:<org>/odoo-hipay.git
 ```
 
-The script builds a fresh repository with `payment_hipay/`, `LICENSE` and
+The script builds a fresh repository with `payment_joinfuture_hipay/`, `LICENSE` and
 `README.md` at the root on branch `18.0`, and pushes it when a remote is given.
 Then, signed in to odoo.com:
 

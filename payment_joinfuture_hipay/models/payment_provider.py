@@ -7,7 +7,7 @@ import requests
 from odoo import _, api, fields, models, service
 from odoo.exceptions import ValidationError
 
-from odoo.addons.payment_hipay import const
+from odoo.addons.payment_joinfuture_hipay import const
 
 _logger = logging.getLogger(__name__)
 
@@ -150,7 +150,7 @@ class PaymentProvider(models.Model):
         self.ensure_one()
         url = f'{self._hipay_get_api_url()}/{endpoint.lstrip("/")}'
         odoo_version = service.common.exp_version()['server_version']
-        module = self.env.ref('base.module_payment_hipay', raise_if_not_found=False)
+        module = self.env.ref('base.module_payment_joinfuture_hipay', raise_if_not_found=False)
         module_version = (module and module.sudo().installed_version) or 'dev'
         headers = {
             'Accept': 'application/json',

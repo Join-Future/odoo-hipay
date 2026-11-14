@@ -11,11 +11,11 @@ from odoo.tests import tagged
 from odoo.tools import mute_logger
 
 from odoo.addons.payment.tests.http_common import PaymentHttpCommon
-from odoo.addons.payment_hipay.controllers.main import HiPayController
-from odoo.addons.payment_hipay.tests.common import HiPayCommon
+from odoo.addons.payment_joinfuture_hipay.controllers.main import HiPayController
+from odoo.addons.payment_joinfuture_hipay.tests.common import HiPayCommon
 
 MAKE_REQUEST = (
-    'odoo.addons.payment_hipay.models.payment_provider.PaymentProvider._hipay_make_request'
+    'odoo.addons.payment_joinfuture_hipay.models.payment_provider.PaymentProvider._hipay_make_request'
 )
 
 
@@ -48,9 +48,9 @@ class _FakeTaxes:
 
 
 LOGGERS = (
-    'odoo.addons.payment_hipay.controllers.main',
-    'odoo.addons.payment_hipay.models.payment_transaction',
-    'odoo.addons.payment_hipay.models.payment_provider',
+    'odoo.addons.payment_joinfuture_hipay.controllers.main',
+    'odoo.addons.payment_joinfuture_hipay.models.payment_transaction',
+    'odoo.addons.payment_joinfuture_hipay.models.payment_provider',
 )
 
 

@@ -13,7 +13,7 @@ from odoo.exceptions import ValidationError
 from odoo.http import request
 from odoo.tools import mute_logger
 
-from odoo.addons.payment_hipay import const
+from odoo.addons.payment_joinfuture_hipay import const
 
 _logger = logging.getLogger(__name__)
 

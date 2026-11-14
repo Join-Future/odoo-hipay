@@ -16,7 +16,7 @@
     'currency': 'USD',
     'depends': ['payment'],
     'data': [
-        'views/payment_hipay_templates.xml',
+        'views/payment_joinfuture_hipay_templates.xml',
         'views/payment_provider_views.xml',
 
         'data/payment_provider_data.xml',
